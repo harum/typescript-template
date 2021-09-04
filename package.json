@@ -6,6 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
+    "compile": "tsc && node dist/app.js",
+    "dev": "nodemon -e ts --exec \"yarn compile\"",
     "lint": "tslint -c tslint.json 'src/**/*.ts'"
   },
   "author": "",
@@ -14,7 +16,8 @@
     "tslint": "^6.1.2",
     "typescript": "^3.8.3",
     "husky": "^4.2.1",
-    "lint-staged": "^10.0.2"
+    "lint-staged": "^10.0.2",
+    "nodemon": "^2.0.2"
   },
   "husky": {
     "hooks": {
