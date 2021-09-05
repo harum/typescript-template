@@ -9,7 +9,7 @@ To run this project locally you will need to have:
 # Getting started
 - Clone the repository
 ```
-git clone --depth=1 https://github.com/harum/simple-typescript-template.git <project_name>
+git clone --depth=1 https://github.com/harum/typescript-template.git <project_name>
 ```
 - Install dependencies
 ```
