@@ -4,20 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "compile": "tsc && node dist/app.js",
-    "dev": "nodemon -e ts --exec \"yarn compile\"",
-    "lint": "tslint -c tslint.json 'src/**/*.ts'"
+    "server:dev": "nodemon --config nodemon.server.json src/index.ts",
+    "server:debug": "nodemon --config nodemon.server.debug.json src/index.ts",
+    "repl": "ts-node",
+    "lint": "tslint -c tslint.json -p tsconfig.base.json"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "tslint": "^6.1.2",
-    "typescript": "^3.8.3",
+    "@tsconfig/recommended": "^1.0.1",
     "husky": "^4.2.1",
     "lint-staged": "^10.0.2",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "ts-node": "^10.2.1",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.10"
   },
   "husky": {
     "hooks": {
