@@ -1,15 +1,18 @@
 {
-  "name": "sangut-typescript",
+  "name": "typescript-project-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple TypeScript project template for server and client code",
   "main": "index.js",
   "scripts": {
-    "server:dev": "nodemon --config nodemon.server.json src/index.ts",
-    "server:debug": "nodemon --config nodemon.server.debug.json src/index.ts",
     "repl": "ts-node",
+    "node-app:dev": "nodemon --config nodemon.server.json src/apps/node-app/index.ts",
+    "node-app:debug": "nodemon --config nodemon.server.debug.json src/apps/node-app/index.ts",
+    "client:dev": "vite",
+    "client:build": "tsc && vite build",
+    "client:serve": "vite preview",
     "lint": "tslint -c tslint.json -p tsconfig.base.json"
   },
-  "author": "",
+  "author": "Putu Harum Bawa",
   "license": "ISC",
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",
@@ -18,7 +21,8 @@
     "nodemon": "^2.0.2",
     "ts-node": "^10.2.1",
     "tslint": "^6.1.2",
-    "typescript": "^3.9.10"
+    "typescript": "^4.3.2",
+    "vite": "^2.5.1"
   },
   "husky": {
     "hooks": {
