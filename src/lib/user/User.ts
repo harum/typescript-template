@@ -2,8 +2,8 @@ class User {
   firstName: string;
   lastName: string;
 
-  constructor(firstname: string, lastName: string) {
-    this.firstName = firstname;
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName;
     this.lastName = lastName;
   }
 
