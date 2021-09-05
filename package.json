@@ -19,6 +19,7 @@
     "husky": "^4.2.1",
     "lint-staged": "^10.0.2",
     "nodemon": "^2.0.2",
+    "prettier": "2.3.2",
     "ts-node": "^10.2.1",
     "tslint": "^6.1.2",
     "typescript": "^4.3.2",
@@ -30,6 +31,10 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts}": "tslint -c tslint.json 'src/**/*.ts'"
+    "*.{js,ts}": [
+      "tslint -c tslint.json -p tsconfig.base.json",
+      "prettier --write",
+      "git add"
+    ]
   }
 }
